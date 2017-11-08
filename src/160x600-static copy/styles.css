@@ -1,0 +1,69 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: 'bold', arial, helvetica, sans-serif;
+	vertical-align: baseline;
+}
+
+p { margin-bottom:5px; }
+
+sup{ font-size:60%; }
+
+/* Safari fix to keep iScroll from overriding other styles */
+*:not(html) {
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Prevents blue border from appearing around linked images in IE */
+
+a { text-decoration: none; }
+
+	a img{ border:none; }
+
+#scroller sup {
+	line-height: 0;
+}
+
+/* Firefox Letter Spacing Fixes */
+
+@-moz-document url-prefix() { 
+	.isitext, .isiboxtext, .isismalltext, .centercontent {
+		letter-spacing: -.075px;
+		word-spacing: -.4px;
+	}
+}
+
+#main-panel {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 160px;
+	height: 600px;
+	border: 1px solid aqua;
+    box-sizing: border-box;
+}
+
+
+	#exit{
+		position: absolute;
+		top:70px;
+		left:10px;
+		padding:10px;
+		border: 1px solid aqua;
+		cursor:pointer;
+	}
+
+	.image{
+		position: absolute;
+		top:10px;
+		left:10px;
+		width:75px;
+		height:50px;
+	}

@@ -1,0 +1,133 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: 'bold', arial, helvetica, sans-serif;
+	vertical-align: baseline;
+}
+
+p { margin-bottom:5px; }
+
+sup{ font-size:60%; }
+
+/* Safari fix to keep iScroll from overriding other styles */
+*:not(html) {
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Prevents blue border from appearing around linked images in IE */
+
+a { text-decoration: none; }
+
+	a img{ border:none; }
+
+#scroller sup {
+	line-height: 0;
+}
+
+/* Firefox Letter Spacing Fixes */
+
+@-moz-document url-prefix() { 
+	.isitext, .isiboxtext, .isismalltext, .centercontent {
+		letter-spacing: -.075px;
+		word-spacing: -.4px;
+	}
+}
+
+#main-panel {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 160px;
+	height: 600px;
+	border: 1px solid aqua;
+    box-sizing: border-box;
+}
+
+
+	#exit{
+		position: absolute;
+		top:70px;
+		left:10px;
+		padding:10px;
+		border: 1px solid aqua;
+		cursor:pointer;
+	}
+
+	.image{
+		position: absolute;
+		top:10px;
+		left:10px;
+		width:75px;
+		height:50px;
+	}
+
+/* Scroller */
+#wrapper {
+	position: absolute;
+	overflow: hidden;
+	background:#ffffff;
+	bottom: 0px;
+	width: 158px;
+	height: 256px;
+
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Prevent text resize on orientation change */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+	#scroller {
+		position: absolute;
+		left: 11px;
+	
+		/* Prevent elements to be highlighted on tap */
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+		/* Put the scroller into the HW Compositing layer right from the start */
+		-webkit-transform: translateZ(0);
+		-moz-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		-o-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+
+	.textwrapper { width: 136px; }
+
+.iScrollVerticalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	width: 3px;
+	bottom: 2px;
+	top: 5px;
+	right: 8px;
+	overflow: hidden;
+}
+
+.iScrollIndicator {;
+	background: #4f4f4f;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #4f4f4f;
+	/*border-radius: 8px;*/
+	opacity: .4;
+	cursor: pointer;
+}

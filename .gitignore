@@ -1,0 +1,13 @@
+# Folder view configuration files
+.DS_Store
+*/.DS_Store
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Application specific files
+node_modules/
+package-lock.json
+production/
+.sass-cache
